@@ -20,6 +20,6 @@ for (let i = 0; i < testCases.length; i++) {
     if (isAnagram(string1, string2)) {
         console.log(`${string1} and ${string2} are anagrams.`);
     } else {
-       console.log(`${string1} and ${string2} are not anagrams.`);
+       console.log(`${string1} and ${string2} are  not anagrams.`);
     }
 }
