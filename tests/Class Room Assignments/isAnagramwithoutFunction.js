@@ -42,19 +42,9 @@ console.log("-------------------------------------------------------------------
         console.log("String 1 is: " + string1);
         console.log("String 2 is: " + string2);
 
-    string1 = string1
-        .toLowerCase()
-        .replace(/\s/g, '')
-        .split('')
-        .sort()
-        .join('');
+    string1 = string1.toLowerCase().replace(/\s/g, '').split('').sort().join('');
 
-    string2 = string2
-        .toLowerCase()
-        .replace(/\s/g, '')
-        .split('')
-        .sort()
-        .join('');
+    string2 = string2.toLowerCase().replace(/\s/g, '').split('') .sort().join('');
        console.log("Sorted String 1 is: " + string1);
         console.log("Sorted String 2 is: " + string2);   
 
