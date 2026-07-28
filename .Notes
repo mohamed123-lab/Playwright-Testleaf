@@ -1,0 +1,246 @@
+# 📘 Playwright Master Notes
+**Course:** Playwright with JavaScript  
+**Day:** 1  
+**Last Updated:** July 26, 2026
+
+---
+
+# Project Structure
+
+## Playwright Test Leaf
+- Main working project.
+- Write all code here.
+- Run tests here.
+- Complete assignments here.
+
+## PW-JS-JUL-26
+- Trainer repository.
+- Used only to receive trainer updates.
+- Do NOT write code here.
+
+---
+
+# Daily Git Workflow
+
+### Check changes
+
+```bash
+git status
+```
+
+### Stage changes
+
+```bash
+git add .
+```
+
+### Commit changes
+
+```bash
+git commit -m "Meaningful message"
+```
+
+Example
+
+```bash
+git commit -m "Complete Day01 homework"
+```
+
+### Push changes
+
+```bash
+git push origin main
+```
+
+---
+
+# Trainer Update Workflow
+
+Inside **PW-JS-JUL-26**
+
+```bash
+git fetch upstream
+git merge upstream/main
+git push origin main
+```
+
+If the trainer adds a new folder (for example, Day05):
+
+Copy that folder into
+
+```
+Playwright Test Leaf/tests
+```
+
+Continue coding only in **Playwright Test Leaf**.
+
+---
+
+# Git Basics
+
+## git status
+Shows what has changed.
+
+## git add
+Stages files for the next commit.
+
+## git commit
+Creates a snapshot of staged changes.
+
+## git push
+Uploads commits to GitHub.
+
+---
+
+# Commit Messages
+
+One commit = One meaningful message.
+
+Examples
+
+```bash
+git commit -m "Configure TypeScript"
+```
+
+```bash
+git commit -m "Complete Day02 assignment"
+```
+
+---
+
+# Project Files
+
+### package.json
+Stores project information and dependencies.
+
+### playwright.config.ts
+Playwright configuration.
+
+### tsconfig.json
+TypeScript configuration.
+
+---
+
+# TypeScript Fix
+
+### Problem
+
+```
+Cannot find name 'process'
+```
+
+### Solution
+
+```bash
+npm install -D @types/node
+npm install -D typescript@5.9
+```
+
+Restart TypeScript Server.
+
+---
+
+# VS Code Shortcuts
+
+| Shortcut | Purpose |
+|----------|---------|
+| Ctrl + Shift + P | Command Palette |
+| Ctrl + P | Open File |
+| Ctrl + ` | Open Terminal |
+| Ctrl + / | Comment Code |
+| Ctrl + S | Save File |
+
+---
+
+# Git Commands to Remember
+
+```bash
+git status
+git add .
+git commit -m "message"
+git push origin main
+
+git fetch upstream
+git merge upstream/main
+```
+
+---
+
+# Folder Structure
+
+```
+Playwright Test Leaf
+│
+├── docs (or Notes)
+│   └── Playwright-Master-Notes.md
+│
+├── tests
+├── package.json
+├── playwright.config.ts
+├── tsconfig.json
+└── .gitignore
+```
+
+---
+
+# Important Concepts
+
+- Git tracks changes to files.
+- GitHub stores repositories online.
+- VS Code is the code editor.
+- Node.js runs JavaScript outside the browser.
+- Playwright is used for browser automation and testing.
+- TypeScript adds type checking to JavaScript.
+
+---
+
+# Best Practices
+
+- Write code only in **Playwright Test Leaf**.
+- Keep the trainer repository separate.
+- Commit often.
+- Use meaningful commit messages.
+- Push changes regularly.
+- Understand the workflow instead of memorizing every command.
+
+---
+
+# Common Mistakes
+
+❌ Writing code in the trainer repository.
+
+✅ Write code only in **Playwright Test Leaf**.
+
+---
+
+# Today's Learning (Day 1)
+
+- Installed Node.js.
+- Installed Playwright.
+- Installed TypeScript.
+- Fixed TypeScript configuration issues.
+- Learned the purpose of `package.json`, `playwright.config.ts`, and `tsconfig.json`.
+- Learned the basic Git workflow:
+  - `git status`
+  - `git add .`
+  - `git commit -m`
+  - `git push`
+- Set up GitHub repositories correctly.
+- Configured `origin` and `upstream`.
+- Learned how to receive trainer updates.
+- Organized the project into:
+  - Main project (`Playwright Test Leaf`)
+  - Trainer repository (`PW-JS-JUL-26`)
+- Created a strategy for maintaining one master notes file throughout the course.
+
+---
+
+# Questions
+
+(Add questions here.)
+
+---
+
+# Errors & Fixes
+
+(Add future errors and their solutions here.)
