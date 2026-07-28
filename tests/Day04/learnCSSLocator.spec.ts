@@ -14,6 +14,4 @@ test("Learn Locating strategy using CSS selector",async({page})=>{
    await page.locator(`#label>a`).click()
    const titleofLP = await page.title()
    console.log(titleofLP);
-   
-
 })
