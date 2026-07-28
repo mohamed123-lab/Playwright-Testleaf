@@ -1,0 +1,48 @@
+//Assignment 1 
+console.log("Assignment 1"+ "\n")
+
+let s = "Hello World"
+let strArr = s.split(" ")
+console.log("The string is " +strArr)    
+let lastWord = strArr[strArr.length-1]
+console.log(`The last word is ${lastWord} `)
+console.log(`Length of the last word is ${lastWord.length} `)
+console.log("________________________________________________________________________________________________________________________________________")
+
+//Assignment 2
+console.log("Assignment 2"+ "\n")
+let s1=  " fly me to the moon "
+let beforetrim = s1
+console.log(`Before Trim is ${beforetrim}`)
+let aftertrim = beforetrim.trim()
+console.log(`After Trim is ${aftertrim}`)
+let wordsplit = aftertrim.split(" ")
+console.log(`Split Word now is ${wordsplit}`)
+let lastWordnow = wordsplit[wordsplit.length-1]
+console.log(`The last word is ${lastWordnow} `)
+console.log("________________________________________________________________________________________________________________________________________")
+
+//Assignment 3
+console.log("Assignment 3"+ "\n")
+
+function isAnagram(str1,str2)
+{
+    str1=str1.toLowerCase().replaceAll(" ", "")
+    str2=str2.toLowerCase().replaceAll(" ", "")
+
+str1 = str1.split("").sort().join("")
+str2 = str2.split("").sort().join("")
+
+console.log(str1)
+console.log(str2)
+
+if (str1 == str2)
+return "Anagram"
+else
+return "Not Anagram"
+}
+
+console.log(isAnagram("listen","silent"))
+console.log(isAnagram("hello","world"))
+
+
