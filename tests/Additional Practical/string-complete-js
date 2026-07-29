@@ -1,0 +1,267 @@
+// STRING CHEAT SHEET FOR TRAINING
+
+// Example 1
+// Literal - Creates a string using quotes.
+// Before Output Will Be:
+// Hello, World!
+// After Output Will Be:
+// Hello, World!
+// Code:
+let strLiteral = 'Hello, World!';
+console.log("Before Literal:", strLiteral);
+console.log("After Literal:", strLiteral);
+console.log("================================================== END OF EXAMPLE 1 ==================================================");
+
+// Example 2
+// Constructor - Creates a string using the String constructor.
+// Before Output Will Be:
+// [String: 'Hello, Testleaf!']
+// After Output Will Be:
+// Hello, Testleaf!
+// Code:
+let strConstructor = new String('Hello, Testleaf!');
+console.log("Before Constructor:", strConstructor);
+console.log("After Constructor:", strConstructor.toString());
+console.log("================================================== END OF EXAMPLE 2 ==================================================");
+
+// Example 3
+// length - Returns the length of the string.
+// Before Output Will Be:
+// Hello, World!
+// After Output Will Be:
+// 13
+// Code:
+let strLength = 'Hello, World!';
+console.log("Before length:", strLength);
+console.log("After length:", strLength.length);
+console.log("================================================== END OF EXAMPLE 3 ==================================================");
+
+// Example 4
+// charAt(index) - Returns the character at the specified index.
+// Before Output Will Be:
+// Hello, World!
+// After Output Will Be:
+// H
+// Code:
+let strCharAt = 'Hello, World!';
+console.log("Before charAt():", strCharAt);
+console.log("After charAt():", strCharAt.charAt(0));
+console.log("================================================== END OF EXAMPLE 4 ==================================================");
+
+// Example 5
+// substring(startIndex, endIndex) - Returns a part of the string between the start and end indexes.
+// Before Output Will Be:
+// Hello, World!
+// After Output Will Be:
+// Hello
+// Code:
+let strSubstring = 'Hello, World!';
+console.log("Before substring():", strSubstring);
+console.log("After substring():", strSubstring.substring(0, 5));
+console.log("================================================== END OF EXAMPLE 5 ==================================================");
+
+// Example 6
+// slice(startIndex, endIndex) - Similar to substring but can accept negative indexes.
+// Before Output Will Be:
+// Hello, Testleaf!
+// After Output Will Be:
+// estleaf!
+// Code:
+let strSlice = 'Hello, Testleaf!';
+console.log("Before slice():", strSlice);
+console.log("After slice():", strSlice.slice(-9));
+console.log("================================================== END OF EXAMPLE 6 ==================================================");
+
+// Example 7
+// substr(startIndex, length) - Returns a part of the string starting from the index for a given number of characters.
+// Before Output Will Be:
+// Hello, World!
+// After Output Will Be:
+// Hello
+// Code:
+let strSubstr = 'Hello, World!';
+console.log("Before substr():", strSubstr);
+console.log("After substr():", strSubstr.substr(0, 5));
+console.log("================================================== END OF EXAMPLE 7 ==================================================");
+
+// Example 8
+// concat() - Combines the text of several strings and returns a new string.
+// Before Output Will Be:
+// Hello
+// After Output Will Be:
+// Hello How are you?
+// Code:
+let strConcat = 'Hello';
+console.log("Before concat():", strConcat);
+let concatResult = strConcat.concat(' How are you?');
+console.log("After concat():", concatResult);
+console.log("================================================== END OF EXAMPLE 8 ==================================================");
+
+// Example 9
+// trim() - Removes whitespace from both ends of a string.
+// Before Output Will Be:
+//    Hello, World!   
+// After Output Will Be:
+// Hello, World!
+// Code:
+let strTrim = '   Hello, World!   ';
+console.log("Before trim():", strTrim);
+console.log("After trim():", strTrim.trim());
+console.log("================================================== END OF EXAMPLE 9 ==================================================");
+
+// Example 10
+// toUpperCase() - Returns the string in upper case.
+// Before Output Will Be:
+// Hello, World!
+// After Output Will Be:
+// HELLO, WORLD!
+// Code:
+let strUpper = 'Hello, World!';
+console.log("Before toUpperCase():", strUpper);
+console.log("After toUpperCase():", strUpper.toUpperCase());
+console.log("================================================== END OF EXAMPLE 10 ==================================================");
+
+// Example 11
+// toLowerCase() - Returns the string in lower case.
+// Before Output Will Be:
+// Hello, World!
+// After Output Will Be:
+// hello, world!
+// Code:
+let strLower = 'Hello, World!';
+console.log("Before toLowerCase():", strLower);
+console.log("After toLowerCase():", strLower.toLowerCase());
+console.log("================================================== END OF EXAMPLE 11 ==================================================");
+
+// Example 12
+// replace(searchFor, replaceWith) - Replaces the specified segment of the string.
+// Before Output Will Be:
+// Hello, World!
+// After Output Will Be:
+// Hello, Mars!
+// Code:
+let strReplace = 'Hello, World!';
+console.log("Before replace():", strReplace);
+console.log("After replace():", strReplace.replace('World', 'Mars'));
+console.log("================================================== END OF EXAMPLE 12 ==================================================");
+
+// Example 13
+// split(separator, limit) - Splits a string into an array of substrings.
+// Before Output Will Be:
+// Hello, Testleaf!
+// After Output Will Be:
+// [ 'Hello', ' Testleaf!' ]
+// Code:
+let strSplit = 'Hello, Testleaf!';
+console.log("Before split():", strSplit);
+console.log("After split():", strSplit.split(','));
+console.log("================================================== END OF EXAMPLE 13 ==================================================");
+
+// Example 14
+// indexOf(subString) - Returns the first occurrence index of the specified value.
+// Before Output Will Be:
+// Hello, Testleaf!
+// After Output Will Be:
+// 2
+// Code:
+let strIndexOf = 'Hello, Testleaf!';
+console.log("Before indexOf():", strIndexOf);
+console.log("After indexOf():", strIndexOf.indexOf('l'));
+console.log("================================================== END OF EXAMPLE 14 ==================================================");
+
+// Example 15
+// lastIndexOf(subString) - Returns the last occurrence index of the specified value.
+// Before Output Will Be:
+// Hello, Testleaf!
+// After Output Will Be:
+// 14
+// Code:
+let strLastIndexOf = 'Hello, Testleaf!';
+console.log("Before lastIndexOf():", strLastIndexOf);
+console.log("After lastIndexOf():", strLastIndexOf.lastIndexOf('l'));
+console.log("================================================== END OF EXAMPLE 15 ==================================================");
+
+// Example 16
+// includes(subString) - Determines whether one string may be found within another string.
+// Before Output Will Be:
+// Hello, Testleaf!
+// After Output Will Be:
+// true
+// Code:
+let strIncludes = 'Hello, Testleaf!';
+console.log("Before includes():", strIncludes);
+console.log("After includes():", strIncludes.includes('Testleaf'));
+console.log("================================================== END OF EXAMPLE 16 ==================================================");
+
+// Example 17
+// startsWith(searchString) - Determines whether a string begins with the specified string.
+// Before Output Will Be:
+// Hello, Testleaf!
+// After Output Will Be:
+// true
+// Code:
+let strStartsWith = 'Hello, Testleaf!';
+console.log("Before startsWith():", strStartsWith);
+console.log("After startsWith():", strStartsWith.startsWith('Hello'));
+console.log("================================================== END OF EXAMPLE 17 ==================================================");
+
+// Example 18
+// endsWith(searchString) - Determines whether a string ends with the specified string.
+// Before Output Will Be:
+// Hello, Testleaf!
+// After Output Will Be:
+// true
+// Code:
+let strEndsWith = 'Hello, Testleaf!';
+console.log("Before endsWith():", strEndsWith);
+console.log("After endsWith():", strEndsWith.endsWith('!'));
+console.log("================================================== END OF EXAMPLE 18 ==================================================");
+
+// Example 19
+// repeat(count) - Constructs and returns a new string which contains repeated copies.
+// Before Output Will Be:
+// Hi 
+// After Output Will Be:
+// Hi Hi 
+// Code:
+let strRepeat = 'Hi ';
+console.log("Before repeat():", strRepeat);
+console.log("After repeat():", strRepeat.repeat(2));
+console.log("================================================== END OF EXAMPLE 19 ==================================================");
+
+// Example 20
+// match(regexp) - Used to match a regular expression against a string.
+// Before Output Will Be:
+// Hello, Testleaf!
+// After Output Will Be:
+// [ 'H', 'T' ]
+// Code:
+let strMatch = 'Hello, Testleaf!';
+console.log("Before match():", strMatch);
+console.log("After match():", strMatch.match(/[A-Z]/g));
+console.log("================================================== END OF EXAMPLE 20 ==================================================");
+
+// Example 21
+// search(regexp) - Executes a search for a match between a regular expression and this string.
+// Before Output Will Be:
+// Hello, Testleaf!
+// After Output Will Be:
+// 0
+// Code:
+let strSearch = 'Hello, Testleaf!';
+console.log("Before search():", strSearch);
+console.log("After search():", strSearch.search(/[A-Z]/));
+console.log("================================================== END OF EXAMPLE 21 ==================================================");
+
+// Example 22
+// Template Literals - Allow embedded expressions and multi-line strings using backticks.
+// Before Output Will Be:
+// World
+// After Output Will Be:
+// Hello, World!
+// Code:
+let name = 'World';
+console.log("Before Template Literal:", name);
+let greeting = `Hello, ${name}!`;
+console.log("After Template Literal:", greeting);
+console.log("================================================== END OF EXAMPLE 22 ==================================================");
