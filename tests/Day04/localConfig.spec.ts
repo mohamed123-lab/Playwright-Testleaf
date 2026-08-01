@@ -1,10 +1,10 @@
-import test, { webkit } from "@playwright/test";
+import test, { chromium } from "@playwright/test";
 
 test("Learn to create a local configuration",async()=>{
     // step 1 : launching the required browser
    // const browser = await chromium.launch({channel:"msedge",headless:false})
    // const browser = await firefox.launch({headless:false})
-   const browser = await webkit.launch({headless:false})
+   const browser = await chromium.launch({headless:false})
     // step 2 : create a new context/profile
     const context1 = await browser.newContext()
     // step 3 : create a new page/tab
@@ -15,3 +15,4 @@ test("Learn to create a local configuration",async()=>{
     const titleOfPage =await page.title()
     console.log(`the landing page title is ${titleOfPage}`);
 })
+
