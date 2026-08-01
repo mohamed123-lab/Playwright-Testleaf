@@ -1,7 +1,7 @@
 import test from "@playwright/test";
 test("Learn Locating strategy using CSS selector",async({page})=>{
    await page.goto("https://leaftaps.com/opentaps/control/login")
-   await page.locator(`#username`).fill("demosalesmanager")
+   await page.locator(`#username`).fill("democsr2")
    // manual wait - for debugging purpose only
    await page.waitForTimeout(2000)
    // [class="inputLogin"]
@@ -11,7 +11,7 @@ test("Learn Locating strategy using CSS selector",async({page})=>{
    // last()
    // nth()
    await page.locator(`.decorativeSubmit`).click()
-   await page.locator(`#label>a`).click()
+   // await page.locator(`#label>a`).click()
    const titleofLP = await page.title()
    console.log(titleofLP);
 })
