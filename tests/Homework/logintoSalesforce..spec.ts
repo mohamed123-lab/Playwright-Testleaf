@@ -1,7 +1,7 @@
 import test, {chromium} from "@playwright/test";
 //Creating a Test
 test("Login Salesforce" ,async()=>{
- //Launching chromiun in Headlness Mode   
+ //Launching chromiun in Headless Mode   
    const browser = await chromium.launch({headless:false})
  // Open a new page within the browser context.
    const context=await browser.newContext()
