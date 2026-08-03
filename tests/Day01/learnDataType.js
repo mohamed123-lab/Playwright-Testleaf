@@ -16,8 +16,8 @@ console.log(isInsured)
 var landlineNumber  // implicitly 
 console.log(landlineNumber)
 // 5.  Null
-var vechinleNumber = null // 000 // explicitly
-console.log(vechinleNumber);
+var vechicleNumber = null // 000 // explicitly
+console.log(vechicleNumber);
 console.log(Number.MAX_SAFE_INTEGER)
 console.log(Number.MIN_SAFE_INTEGER)
 console.log(typeof firstName,typeof empId, typeof isInsured,typeof vechinleNumber)// 000 --> object
