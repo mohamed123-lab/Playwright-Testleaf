@@ -39,7 +39,7 @@ function makePayment(PaymentMethod:unionType){
     }
 }
 
-console.log("Payment method chosen: " + "UPI");
+console.log('Payment method chosen: UPI');
 makePayment("UPI")
 
 console.log("Payment method chosen: " + "CreditCard");

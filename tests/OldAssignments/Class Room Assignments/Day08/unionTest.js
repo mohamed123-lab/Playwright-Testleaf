@@ -19,11 +19,11 @@ function makePayment(PaymentMethod) {
             break;
     }
 }
-console.log("Payment method chosen:" + "UPI");
+console.log('Payment method chosen: UPI');
 makePayment("UPI");
-console.log("Payment method chosen:" + "CreditCard");
+console.log("Payment method chosen: " + "CreditCard");
 makePayment("CreditCard");
-console.log("Payment method chosen:" + "PayPal");
+console.log("Payment method chosen: " + "PayPal");
 makePayment("PayPal");
-console.log("Payment method chosen:" + "Mastercard");
+console.log("Payment method chosen: " + "Mastercard");
 makePayment("Mastercard");
