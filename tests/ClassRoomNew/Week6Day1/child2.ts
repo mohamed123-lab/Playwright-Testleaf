@@ -1,17 +1,31 @@
-import { Browser } from "./Parent"
+// ===============================
+// CHILD CLASS
+// File: Edge.ts
+// ===============================
+//
+// Edge also inherits from Browser.
 
-class Edge extends Browser
-{
-    launchBrowser()
-    {
-        console.log("Browser is Edge")
+import { Browser } from "./parent";
+
+
+class Edge extends Browser {
+
+    // Edge-specific method
+    launchBrowser() {
+        console.log("Browser is Edge");
     }
 }
 
 
-const ed = new Edge()
-ed.browsertype()
-ed.launchBrowser()
-ed.browserversion()
+// Create an object of Edge
+const ed = new Edge();
 
 
+// Inherited from Browser
+ed.browsertype();
+
+// Edge's own method
+ed.launchBrowser();
+
+// Inherited from Browser
+ed.browserversion();
