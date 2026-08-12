@@ -55,5 +55,5 @@ test("RedBus and Flipkart in Edge and Firefox Browsers", async () => {
 
     // Close both browser instances after the test
     await edgeBrowser.close();
-    await firefoxBrowser.close();
+    await firefoxBrowser.close(); 
 });
