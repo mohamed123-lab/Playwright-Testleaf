@@ -1,48 +1,115 @@
-//Assignment 1 
-console.log("Assignment 1"+ "\n")
+// =================================================
+// ASSIGNMENT 1: FIND THE LAST WORD AND ITS LENGTH
+// =================================================
+//
+// Steps:
+// 1. Store the sentence in a string.
+// 2. Split the sentence into words using a space.
+// 3. Get the last word using the array length.
+// 4. Find the length of the last word.
+// =================================================
 
-let s = "Hello World"
-let strArr = s.split(" ")
-console.log("The string is " +strArr)    
-let lastWord = strArr[strArr.length-1]
-console.log(`The last word is ${lastWord} `)
-console.log(`Length of the last word is ${lastWord.length} `)
-console.log("________________________________________________________________________________________________________________________________________")
+console.log("Assignment 1\n");
 
-//Assignment 2
-console.log("Assignment 2"+ "\n")
-let s1=  " fly me to the moon "
-let beforetrim = s1
-console.log(`Before Trim is ${beforetrim}`)
-let aftertrim = beforetrim.trim()
-console.log(`After Trim is ${aftertrim}`)
-let wordsplit = aftertrim.split(" ")
-console.log(`Split Word now is ${wordsplit}`)
-let lastWordnow = wordsplit[wordsplit.length-1]
-console.log(`The last word is ${lastWordnow} `)
-console.log("________________________________________________________________________________________________________________________________________")
+let s = "Hello World";
 
-//Assignment 3
-console.log("Assignment 3"+ "\n")
+// split(" ") → converts the string into an array of words
+let strArr = s.split(" ");
 
-function isAnagram(str1,str2)
-{
-    str1=str1.toLowerCase().replaceAll(" ", "")
-    str2=str2.toLowerCase().replaceAll(" ", "")
+console.log("The string is " + strArr);
 
-str1 = str1.split("").sort().join("")
-str2 = str2.split("").sort().join("")
+// strArr.length - 1 → index of the last element
+let lastWord = strArr[strArr.length - 1];
 
-console.log(str1)
-console.log(str2)
+console.log(`The last word is ${lastWord}`);
+console.log(`Length of the last word is ${lastWord.length}`);
 
-if (str1 == str2)
-return "Anagram"
-else
-return "Not Anagram"
+
+// =================================================
+// ASSIGNMENT 2: TRIM AND FIND THE LAST WORD
+// =================================================
+//
+// trim() removes spaces from the beginning and end
+// of a string.
+//
+// Steps:
+// 1. Store a string containing extra spaces.
+// 2. Remove leading/trailing spaces using trim().
+// 3. Split the string into words.
+// 4. Get the last word.
+// =================================================
+
+console.log("\nAssignment 2\n");
+
+let s1 = " fly me to the moon ";
+
+let beforetrim = s1;
+console.log(`Before Trim is ${beforetrim}`);
+
+// trim() removes spaces from the beginning and end
+let aftertrim = beforetrim.trim();
+
+console.log(`After Trim is ${aftertrim}`);
+
+// Split the trimmed string into individual words
+let wordsplit = aftertrim.split(" ");
+
+console.log(`Split Word now is ${wordsplit}`);
+
+// Get the last word from the array
+let lastWordnow = wordsplit[wordsplit.length - 1];
+
+console.log(`The last word is ${lastWordnow}`);
+
+
+// =================================================
+// ASSIGNMENT 3: CHECK IF TWO STRINGS ARE ANAGRAMS
+// =================================================
+//
+// Anagram:
+// Two strings are anagrams when they contain the
+// same characters, regardless of their order.
+//
+// Example:
+// "listen" → "silent"
+//
+// Steps:
+// 1. Convert both strings to lowercase.
+// 2. Remove spaces.
+// 3. Split into individual characters.
+// 4. Sort the characters.
+// 5. Join them back into strings.
+// 6. Compare the two strings.
+// =================================================
+
+console.log("\nAssignment 3\n");
+
+function isAnagram(str1: string, str2: string) {
+
+    // Convert both strings to lowercase
+    // and remove all spaces.
+    str1 = str1.toLowerCase().replaceAll(" ", "");
+    str2 = str2.toLowerCase().replaceAll(" ", "");
+
+    // Convert strings into characters,
+    // sort the characters,
+    // and join them back into strings.
+    str1 = str1.split("").sort().join("");
+    str2 = str2.split("").sort().join("");
+
+    // Print the processed strings so we can compare them.
+    console.log(str1);
+    console.log(str2);
+
+    // If both sorted strings are equal,
+    // the original strings are anagrams.
+    if (str1 == str2)
+        return "Anagram";
+    else
+        return "Not Anagram";
 }
 
-console.log(isAnagram("listen","silent"))
-console.log(isAnagram("hello","world"))
 
-
+// Test the function with two sets of strings
+console.log(isAnagram("listen", "silent"));
+console.log(isAnagram("hello", "world"));

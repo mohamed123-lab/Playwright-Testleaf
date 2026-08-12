@@ -1,48 +1,118 @@
-/*Task 1: Function Declaration Create a function named `userProfile` that takes a `name` as a parameter and logs “Hello,
-<name>!" to the console.*/
+// ========================================
+// FUNCTIONS - DIFFERENT TYPES
+// ========================================
+//
+// This program demonstrates four types of functions:
+//
+// 1. Function Declaration
+// 2. Arrow Function
+// 3. Anonymous Function
+// 4. Callback Function
+// ========================================
+
+
+// ========================================
+// TASK 1: FUNCTION DECLARATION
+// ========================================
+//
+// A function declaration uses the "function" keyword
+// followed by a function name.
+//
+// userProfile() accepts "name" as a parameter.
+// ========================================
+
 let name = "MohamedR";
-function   userProfile(name)
-{
-console.log("User name is: " + name);
+
+function userProfile(name: string) {
+    console.log("User name is: " + name);
 }
 
-/*Task 2: Arrow Function
-Create an arrow function named `double` that takes a number as a parameter and returns
-double its value.*/
+// Call the function when needed:
+// userProfile(name);
 
-let double = (number) =>
-{
-return number * 10;
-}
 
-/*Task 3: Anonymous Function
-Use an anonymous function with `setTimeout` to log `"This message is delayed by 2 seconds"`
-after 2 seconds*/
+// ========================================
+// TASK 2: ARROW FUNCTION
+// ========================================
+//
+// An arrow function is another way to write a function.
+//
+// Syntax:
+// const functionName = (parameter) => {
+//     return value;
+// };
+//
+// This function takes a number and returns
+// its value multiplied by 10.
+// ========================================
 
-setTimeout(function() {
+let double = (number: number) => {
+    return number * 10;
+};
+
+// Example:
+// console.log(double(5));
+
+
+// ========================================
+// TASK 3: ANONYMOUS FUNCTION
+// ========================================
+//
+// An anonymous function is a function without a name.
+//
+// Here, the anonymous function is passed directly
+// to setTimeout().
+//
+// setTimeout() executes the function after
+// the specified delay.
+//
+// 2000 milliseconds = 2 seconds.
+// ========================================
+
+setTimeout(function () {
     console.log("This message is delayed by 2 seconds");
 }, 2000);
 
-/*Task 4: Callback Function
-Create a function named `getUserData` that takes a callback function as a parameter. Inside
-`getUserData`, simulate fetching data with `setTimeout` and then call the callback function
-with a user object after 3 seconds.
-Call the `getUserData` function and log the user's name and age using the callback function.*/
 
-function getUserData(callback) {
-    setTimeout(function() {
+// ========================================
+// TASK 4: CALLBACK FUNCTION
+// ========================================
+//
+// A callback is a function passed as an argument
+// to another function.
+//
+// getUserData() receives a callback function.
+//
+// After 3 seconds, simulated user data is created
+// and passed to the callback.
+// ========================================
+
+function getUserData(callback: (user: { username: string; age: number }) => void) {
+
+    // Simulate fetching data from a server.
+    // 3000 milliseconds = 3 seconds.
+    setTimeout(function () {
+
         let user = {
             username: "Mohamed",
             age: 20
         };
+
+        // Call the callback and pass the user object.
         callback(user);
+
     }, 3000);
 }
 
-getUserData(function(user) {
+
+// Call getUserData() and provide an anonymous
+// callback function.
+//
+// The "user" parameter receives the object
+// passed by callback(user).
+getUserData(function (user) {
+
     console.log("User name is: " + user.username);
     console.log("User age is: " + user.age);
-});
 
-//console.log(double(5));
-//userProfile(name);
+});

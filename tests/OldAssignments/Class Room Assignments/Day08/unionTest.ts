@@ -1,52 +1,72 @@
 // =================================================
-//                     CLASSROOM ACTIVITY: UNION TYPE
-// ==================================================
+//              UNION TYPE - PAYMENT METHOD
+// =================================================
+//
+// Union type (|) allows a variable or parameter
+// to accept ONLY the specified types/values.
+//
+// Here, PaymentMethod can be:
+// "UPI" | "CreditCard" | "PayPal"
+//
+// Therefore, any other payment method such as
+// "Mastercard" will cause a TypeScript error.
+// =================================================
 
-import { log } from "node:console";
 
-// ACTIVITY DESCRIPTION:
-// --------------------------------------------------------------------------------
-// - Create a function that accepts only specific payment methods.
-// - Create a type alias called PaymentMethod that allows only "UPI", "CreditCard",
-//   or "PayPal".
-// - Write a function makePayment that takes a parameter of type PaymentMethod and
-//   prints which payment method is chosen.
-// - Call the function with "UPI" and "CreditCard" as arguments.
+// Create a type alias using a union type.
+// The variable can contain ONLY one of these values.
+type PaymentMethod = "UPI" | "CreditCard" | "PayPal";
 
 
-// OUTPUT:
-// --------------------------------------------------------------------------------
-// Payment method chosen: UPI
-// Payment method chosen: CreditCard
-// ================================================
+// Function accepts only the PaymentMethod type.
+// Therefore, only UPI, CreditCard, or PayPal
+// can be passed as an argument.
+function makePayment(paymentMethod: PaymentMethod) {
 
-type unionType ="UPI"|"CreditCard"|"PayPal"
-function makePayment(PaymentMethod:unionType){
-    switch (PaymentMethod) {
+    // Check which payment method was provided.
+    switch (paymentMethod) {
+
         case "UPI":
             console.log("UPI Payment is accepted");
             break;
-         case "CreditCard":
+
+        case "CreditCard":
             console.log("CreditCard Payment is accepted");
             break;
-          case "PayPal":
+
+        case "PayPal":
             console.log("PayPal Payment is accepted");
             break;
-          
+
+        // TypeScript knows that the allowed values
+        // are already limited by the union type.
         default:
-            console.log("The Given Payment method is not acceped");
+            console.log("The given payment method is not accepted");
             break;
     }
 }
 
-console.log('Payment method chosen: UPI');
-makePayment("UPI")
 
-console.log("Payment method chosen: " + "CreditCard");
-makePayment("CreditCard")
+// Pass an allowed value from the union type
+console.log("Payment method chosen: UPI");
+makePayment("UPI");
 
-console.log("Payment method chosen: " + "PayPal");
-makePayment("PayPal")
 
-console.log("Payment method chosen: " + "Mastercard");
-makePayment("Mastercard")
+// Pass another allowed value
+console.log("Payment method chosen: CreditCard");
+makePayment("CreditCard");
+
+
+// Pass another allowed value
+console.log("Payment method chosen: PayPal");
+makePayment("PayPal");
+
+
+// ❌ TypeScript error:
+// "Mastercard" is NOT part of PaymentMethod.
+//
+// makePayment("Mastercard");
+//
+// To allow Mastercard, it must first be added to the union:
+//
+// type PaymentMethod = "UPI" | "CreditCard" | "PayPal" | "Mastercard";
