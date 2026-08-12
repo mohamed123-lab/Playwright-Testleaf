@@ -22,7 +22,7 @@
 // else     → runs when none of the conditions match
 // ========================================
 
-function launchBrowser(browserName: string) {
+function launchBrowser(browserName) {
 
     if (browserName == "chrome")
         console.log("Chrome browser is getting launched");
@@ -48,7 +48,7 @@ function launchBrowser(browserName: string) {
 // default → runs when no case matches
 // ========================================
 
-function runTests(testType: string) {
+function runTests(testType) {
 
     switch (testType) {
 

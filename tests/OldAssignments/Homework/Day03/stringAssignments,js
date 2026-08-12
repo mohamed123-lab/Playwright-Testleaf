@@ -3,9 +3,9 @@
 // =================================================
 //
 // Steps:
-// 1. Store the sentence in a string.
-// 2. Split the sentence into words using a space.
-// 3. Get the last word using the array length.
+// 1. Store the sentence.
+// 2. Split the sentence into words.
+// 3. Get the last word using array length.
 // 4. Find the length of the last word.
 // =================================================
 
@@ -13,12 +13,12 @@ console.log("Assignment 1\n");
 
 let s = "Hello World";
 
-// split(" ") → converts the string into an array of words
+// split(" ") → converts string into an array of words
 let strArr = s.split(" ");
 
 console.log("The string is " + strArr);
 
-// strArr.length - 1 → index of the last element
+// length - 1 → index of the last element
 let lastWord = strArr[strArr.length - 1];
 
 console.log(`The last word is ${lastWord}`);
@@ -29,8 +29,7 @@ console.log(`Length of the last word is ${lastWord.length}`);
 // ASSIGNMENT 2: TRIM AND FIND THE LAST WORD
 // =================================================
 //
-// trim() removes spaces from the beginning and end
-// of a string.
+// trim() → removes spaces from the beginning and end.
 //
 // Steps:
 // 1. Store a string containing extra spaces.
@@ -46,12 +45,12 @@ let s1 = " fly me to the moon ";
 let beforetrim = s1;
 console.log(`Before Trim is ${beforetrim}`);
 
-// trim() removes spaces from the beginning and end
+// trim() → removes spaces from beginning and end
 let aftertrim = beforetrim.trim();
 
 console.log(`After Trim is ${aftertrim}`);
 
-// Split the trimmed string into individual words
+// Split the trimmed string into words
 let wordsplit = aftertrim.split(" ");
 
 console.log(`Split Word now is ${wordsplit}`);
@@ -67,8 +66,8 @@ console.log(`The last word is ${lastWordnow}`);
 // =================================================
 //
 // Anagram:
-// Two strings are anagrams when they contain the
-// same characters, regardless of their order.
+// Two strings contain the same characters,
+// regardless of their order.
 //
 // Example:
 // "listen" → "silent"
@@ -79,30 +78,26 @@ console.log(`The last word is ${lastWordnow}`);
 // 3. Split into individual characters.
 // 4. Sort the characters.
 // 5. Join them back into strings.
-// 6. Compare the two strings.
+// 6. Compare the strings.
 // =================================================
 
 console.log("\nAssignment 3\n");
 
-function isAnagram(str1: string, str2: string) {
+function isAnagram(str1, str2) {
 
-    // Convert both strings to lowercase
-    // and remove all spaces.
+    // Convert to lowercase and remove spaces
     str1 = str1.toLowerCase().replaceAll(" ", "");
     str2 = str2.toLowerCase().replaceAll(" ", "");
 
-    // Convert strings into characters,
-    // sort the characters,
-    // and join them back into strings.
+    // Convert to characters → sort → join back
     str1 = str1.split("").sort().join("");
     str2 = str2.split("").sort().join("");
 
-    // Print the processed strings so we can compare them.
+    // Print processed strings for comparison
     console.log(str1);
     console.log(str2);
 
-    // If both sorted strings are equal,
-    // the original strings are anagrams.
+    // If sorted strings are equal, they are anagrams
     if (str1 == str2)
         return "Anagram";
     else
@@ -110,6 +105,6 @@ function isAnagram(str1: string, str2: string) {
 }
 
 
-// Test the function with two sets of strings
+// Test the function with different string pairs
 console.log(isAnagram("listen", "silent"));
 console.log(isAnagram("hello", "world"));

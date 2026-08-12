@@ -23,7 +23,7 @@
 
 let name = "MohamedR";
 
-function userProfile(name: string) {
+function userProfile(name) {
     console.log("User name is: " + name);
 }
 
@@ -46,7 +46,7 @@ function userProfile(name: string) {
 // its value multiplied by 10.
 // ========================================
 
-let double = (number: number) => {
+let double = (number) => {
     return number * 10;
 };
 
@@ -87,7 +87,7 @@ setTimeout(function () {
 // and passed to the callback.
 // ========================================
 
-function getUserData(callback: (user: { username: string; age: number }) => void) {
+function getUserData(callback) {
 
     // Simulate fetching data from a server.
     // 3000 milliseconds = 3 seconds.
@@ -110,9 +110,8 @@ function getUserData(callback: (user: { username: string; age: number }) => void
 //
 // The "user" parameter receives the object
 // passed by callback(user).
-getUserData(function (user) {
 
+getUserData(function (user) {
     console.log("User name is: " + user.username);
     console.log("User age is: " + user.age);
-
 });

@@ -2,48 +2,34 @@
 // CHECK IF TWO STRINGS ARE ANAGRAMS
 // ========================================
 //
-// An anagram is a word or phrase that contains
-// the same letters as another word or phrase,
-// but in a different order.
+// An anagram contains the same letters as another
+// word/phrase, but the letters can be in a different order.
 //
 // Examples:
-// "listen"       → "silent"
+// "listen" → "silent"
 // "conversation" → "voices rant on"
 //
-// The program:
-// 1. Converts both strings to lowercase.
-// 2. Splits each string into individual characters.
-// 3. Sorts the characters alphabetically.
-// 4. Joins the characters back into a string.
-// 5. Compares the two resulting strings.
+// Steps:
+// 1. Convert both strings to lowercase.
+// 2. Split them into individual characters.
+// 3. Sort the characters.
+// 4. Join them back into strings.
+// 5. Compare the sorted strings.
 //
-// If the sorted strings are identical,
-// the original strings are anagrams.
+// If both sorted strings are equal,
+// they are anagrams.
 // ========================================
 
-
-function isAnagram(string1: string, string2: string): boolean {
+function isAnagram(string1, string2) {
 
     // Convert the first string to lowercase,
-    // split it into individual characters,
-    // sort the characters,
-    // and join them back into a string.
-    string1 = string1
-        .toLowerCase()
-        .split("")
-        .sort()
-        .join("");
+    // split into characters, sort, and join back.
+    string1 = string1.toLowerCase().split("").sort().join("");
 
     // Do the same for the second string.
-    string2 = string2
-        .toLowerCase()
-        .split("")
-        .sort()
-        .join("");
+    string2 = string2.toLowerCase().split("").sort().join("");
 
-    // Compare the processed strings.
-    // If they are identical, return true.
-    // Otherwise, return false.
+    // Return true if both processed strings are equal.
     return string1 === string2;
 }
 
@@ -52,15 +38,10 @@ function isAnagram(string1: string, string2: string): boolean {
 // TEST CASES
 // ========================================
 //
-// Each inner array contains two strings
-// that we want to compare.
-//
-// testCases[0] → ["listen", "silent"]
-// testCases[1] → ["Listen", "Silent"]
-// etc.
+// Each array contains two strings to compare.
 // ========================================
 
-let testCases: string[][] = [
+let testCases = [
     ["listen", "silent"],
     ["Listen", "Silent"],
     ["conversation", "voices rant on"],
@@ -72,43 +53,22 @@ let testCases: string[][] = [
 // LOOP THROUGH ALL TEST CASES
 // ========================================
 //
-// i represents the index of the current
-// test case.
-//
-// testCases.length gives the total number
-// of test cases.
+// i represents the current array index.
+// testCases.length gives the total number of test cases.
 // ========================================
 
 for (let i = 0; i < testCases.length; i++) {
 
-    // Extract the two strings from the
-    // current test case.
-    //
-    // Example:
-    // ["listen", "silent"]
-    //        ↓
-    // string1 = "listen"
-    // string2 = "silent"
+    // Extract the two strings from the current test case.
     let [string1, string2] = testCases[i];
 
-
-    // Print the current test case
+    // Print the current test case.
     console.log(testCases[i]);
 
-
-    // Call the isAnagram() function
-    // to check whether the two strings
-    // contain the same letters.
+    // Check whether the two strings are anagrams.
     if (isAnagram(string1, string2)) {
-
-        console.log(
-            `${string1} and ${string2} are anagrams.`
-        );
-
+        console.log(`${string1} and ${string2} are anagrams.`);
     } else {
-
-        console.log(
-            `${string1} and ${string2} are not anagrams.`
-        );
+        console.log(`${string1} and ${string2} are not anagrams.`);
     }
 }

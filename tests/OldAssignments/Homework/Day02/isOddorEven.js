@@ -36,7 +36,7 @@ let result1 = isOddOrEven(nbr1), result2 = isOddOrEven(nbr2);
 // Otherwise, it is ODD.
 // ========================================
 
-function isOddOrEven(nbr: number) {
+function isOddOrEven(nbr) {
 
     if (nbr % 2 === 0) {
         return "Even";

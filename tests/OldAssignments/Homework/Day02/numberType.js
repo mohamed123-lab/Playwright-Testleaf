@@ -38,7 +38,7 @@ let result1 = checkthenumbertype(number1),
 //            which means the number is 0.
 // ========================================
 
-function checkthenumbertype(number: number) {
+function checkthenumbertype(number) {
 
     if (number > 0) {
         return "Positive Number";

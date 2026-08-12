@@ -44,7 +44,7 @@ let result1 = gradeStudent(score1),
 // return "Grade A"
 // ========================================
 
-function gradeStudent(score: number) {
+function gradeStudent(score) {
 
     switch (true) {
 
